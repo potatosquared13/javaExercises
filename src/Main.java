@@ -1,8 +1,11 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        areaOfCircle();
+//        areaOfCircle();
+//        leapYear(2000);
+        averageSum();
     }
 
     public static void areaOfCircle() {
@@ -17,7 +20,26 @@ public class Main {
     }
 
     public static double getArea(double radius) {
-        double pi = 3.14159265;
-        return pi * Math.pow(radius, 2);
+        return 3.14159265 * Math.pow(radius, 2);
+    }
+
+    public static void leapYear(int year) {
+        if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) System.out.printf("%d is leap year!\n", year);
+        else System.out.printf("%d is not a leap year!\n", year);
+    }
+
+    public static void averageSum() {
+        Scanner input = new Scanner(System.in);
+        double[] arr = { 0, 0, 0, 0, 0 };  //arrays lengths have to be specified
+        double sum = 0;
+
+        for(int i = 0; i < arr.length; i++) {
+            System.out.print("Enter number " + (i + 1) + ": ");
+            arr[i] = input.nextDouble();
+            sum += arr[i];
+        }
+
+        System.out.println("Sum of array is: " + sum);
+        System.out.println("Average of array is " + (sum / arr.length));
     }
 }

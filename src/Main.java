@@ -11,18 +11,17 @@ public class Main {
 //        reverseString();
 
         // ATM Machine
-        BankAccount dan = new BankAccount();
-        dan.createAccount("Daniel Villanueva");
-        dan.depositAmount(800);
-        dan.depositAmount(500);
-        dan.withdrawAmount(200);
-        dan.withdrawAmount(1400);
+        BankAccount dan = new BankAccount("Daniel Villanueva");
+        dan.depositAmount(1);
+        dan.testDivision();
+        System.out.println(dan.getBalance());
     }
 
     public static void areaOfCircle() {
         System.out.println("--Problem 1--");
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the radius of the circle (in cm): ");
+
         double radius = input.nextDouble();
 
         double areaOfCircle = getArea(radius);
@@ -42,17 +41,17 @@ public class Main {
         System.out.print("Enter year: ");
         int year = input.nextInt();
 
-        if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) System.out.printf("%d is leap year!\n", year);
+        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) System.out.printf("%d is leap year!\n", year);
         else System.out.printf("%d is not a leap year!\n", year);
     }
 
     public static void averageSum() {
         System.out.println("\n--Problem 3--");
         Scanner input = new Scanner(System.in);
-        double[] arr = { 0, 0, 0, 0, 0 };  //arrays lengths have to be specified
+        double[] arr = {0, 0, 0, 0, 0};  //arrays lengths have to be specified
         double sum = 0;
 
-        for(int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             System.out.print("Enter number " + (i + 1) + ": ");
             arr[i] = input.nextDouble();
             sum += arr[i];
@@ -71,7 +70,7 @@ public class Main {
         String word = input.nextLine();
 
 
-        for(int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) {
             reverseWord = word.charAt(i) + reverseWord; //insert char before first char
         }
 

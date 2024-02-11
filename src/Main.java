@@ -1,12 +1,22 @@
+import simple_bank.BankAccount;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        areaOfCircle();
-        leapYear();
-        averageSum();
-        reverseString();
+//        areaOfCircle();
+//        leapYear();
+//        averageSum();
+//        reverseString();
+
+        // ATM Machine
+        BankAccount dan = new BankAccount();
+        dan.createAccount("Daniel Villanueva");
+        dan.depositAmount(800);
+        dan.depositAmount(500);
+        dan.withdrawAmount(200);
+        dan.withdrawAmount(1400);
     }
 
     public static void areaOfCircle() {
